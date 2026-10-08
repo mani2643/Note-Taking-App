@@ -26,9 +26,13 @@
   --base-transparent-100: rgba(30, 31, 38, 1);
 }
 
+html{
+  font-size:12pt;
+}
+
 body {
   font-family: Poppins, sans-serif;
-  margin: 2rem;
+  padding:1.5rem;
   background: var(--base-color);
   color: var(--text-color);
 }
@@ -284,4 +288,40 @@ dialog::backdrop {
 .empty-state p {
   font-size: 1rem;
   margin-bottom: 2rem;
+}
+
+@media(max-width:600px){
+    html{
+        font-size:10pt;
+    }
+    h1{
+        margin:unset;
+    }
+    #themeToggleBtn{
+        flex-shrink:0;
+    }
+}
+@media(max-width:450px){
+    body{
+        padding:1rem;
+    }
+    header{
+        gap:.5rem;
+    }
+    header h1{
+        font-size:1.8rem;
+    }
+    header .add-note-btn{
+        flex-shrink:0;
+        padding:.5rem 1rem;
+    }
+    header #themeToggleBtn{
+        display:none;
+    }
+    .notes-card{
+        padding:1rem;
+    }
+    .dialog-content{
+      padding:1.5rem;
+    }
 }
